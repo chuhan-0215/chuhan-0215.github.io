@@ -86,7 +86,7 @@ const CONTENT={
       [
         "2024—2026",
         "持续学习Python",
-        "从青少年人工智能编程水平测试四级，逐步学习至七级。"
+        "从青少年人工智能编程水平测试四级，逐步学习至八级。"
       ],
       [
         "2025.05",
@@ -149,9 +149,9 @@ const CONTENT={
         "2026年5月颁发"
       ],
       [
-        "2026.01",
+        "当前",
         "青少年人工智能编程水平测试",
-        "Python七级"
+        "Python八级"
       ]
     ],
     "contactTitle": "让交流成为<br>下一次探索的起点。",
@@ -251,7 +251,7 @@ const CONTENT={
       [
         "2024–2026",
         "Learning Python, step by step",
-        "Progressed from Level 4 to Level 7 in a youth AI programming proficiency assessment."
+        "Progressed from Level 4 to Level 8 in a youth AI programming proficiency assessment."
       ],
       [
         "MAY 2025",
@@ -314,9 +314,9 @@ const CONTENT={
         "Award presented in May 2026"
       ],
       [
-        "JAN 2026",
+        "CURRENT",
         "Youth AI programming proficiency assessment",
-        "Python Level 7"
+        "Python Level 8"
       ]
     ],
     "contactTitle": "A conversation can start<br>the next exploration.",
