@@ -1,11 +1,11 @@
 from pathlib import Path
 from html.parser import HTMLParser
-import re,json,sys
+import re,json,sys,hashlib
 R=Path(sys.argv[1])if len(sys.argv)>1 else Path(__file__).resolve().parent/'dist'
 class Check(HTMLParser):
  def handle_starttag(self,tag,attrs):
   a=dict(attrs)
-  if tag=='a'and'href'in a:assert a['href'].startswith('#'),('outbound navigation',a['href'])
+  if tag=='a'and'href'in a:assert a['href'].startswith('#')or a['href']=='papers/Confidence-Fallback.pdf',('outbound navigation',a['href'])
   if tag in ['script','img','link']:
    k='href'if tag=='link'else'src';v=a.get(k)
    if v and not v.startswith('data:'):assert not re.match(r'^(https?:)?//',v)and(R/v).is_file(),v
@@ -22,3 +22,6 @@ for p in photos:
  for k in ['src','thumb']:
   b=(R/p[k]).read_bytes();assert b.startswith(b'RIFF')and b[8:12]==b'WEBP'
 print(json.dumps({'public_content_check':'pass','photos':len(photos),'no_server_links':True,'agent_details':'one generic statement per language'}))
+if(R/'paper.json').exists():
+ p=json.loads((R/'paper.json').read_text(encoding='utf8'));raw=(R/p['href']).read_bytes();assert raw.startswith(b'%PDF-')and len(raw)==p['bytes']and hashlib.sha256(raw).hexdigest()==p['sha256']and p['pages']==4
+ print(json.dumps({'author_provided_paper':'pass','pages':p['pages'],'sha256':p['sha256']}))

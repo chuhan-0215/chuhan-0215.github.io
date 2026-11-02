@@ -1,0 +1,13 @@
+{
+  "href": "papers/Confidence-Fallback.pdf",
+  "sha256": "987dc355865f69d60dccfc36d33a8eea5e19d4374b200aaff57fbeb5cebeaeb5",
+  "bytes": 315071,
+  "pages": 4,
+  "version": "author-provided",
+  "authors": [
+    "Songyang Pang",
+    "Jingwen Fu"
+  ],
+  "presentation": "ICAIS 2026 Oral",
+  "not_modified": true
+}
